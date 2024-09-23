@@ -1,4 +1,6 @@
-#include<iostream>
-int main(){
-	std::cout<<"Hello"<<"\n";
+#include "hello.h"
+#include <iostream>
+
+void sayHello() {
+    std::cout << "Hello" << std::endl;
 }
