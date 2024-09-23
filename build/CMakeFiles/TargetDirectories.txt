@@ -1,0 +1,3 @@
+/home/pluto/demo/build/CMakeFiles/rebuild_cache.dir
+/home/pluto/demo/build/CMakeFiles/HelloWorld.dir
+/home/pluto/demo/build/CMakeFiles/edit_cache.dir
