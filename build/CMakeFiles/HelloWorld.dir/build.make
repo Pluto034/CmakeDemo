@@ -83,46 +83,46 @@ CMakeFiles/HelloWorld.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pluto/demo/main.cpp -o CMakeFiles/HelloWorld.dir/main.cpp.s
 
-CMakeFiles/HelloWorld.dir/hello.cpp.o: CMakeFiles/HelloWorld.dir/flags.make
-CMakeFiles/HelloWorld.dir/hello.cpp.o: ../hello.cpp
-CMakeFiles/HelloWorld.dir/hello.cpp.o: CMakeFiles/HelloWorld.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pluto/demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HelloWorld.dir/hello.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HelloWorld.dir/hello.cpp.o -MF CMakeFiles/HelloWorld.dir/hello.cpp.o.d -o CMakeFiles/HelloWorld.dir/hello.cpp.o -c /home/pluto/demo/hello.cpp
+CMakeFiles/HelloWorld.dir/hello/hello.cpp.o: CMakeFiles/HelloWorld.dir/flags.make
+CMakeFiles/HelloWorld.dir/hello/hello.cpp.o: ../hello/hello.cpp
+CMakeFiles/HelloWorld.dir/hello/hello.cpp.o: CMakeFiles/HelloWorld.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pluto/demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HelloWorld.dir/hello/hello.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HelloWorld.dir/hello/hello.cpp.o -MF CMakeFiles/HelloWorld.dir/hello/hello.cpp.o.d -o CMakeFiles/HelloWorld.dir/hello/hello.cpp.o -c /home/pluto/demo/hello/hello.cpp
 
-CMakeFiles/HelloWorld.dir/hello.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/hello.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pluto/demo/hello.cpp > CMakeFiles/HelloWorld.dir/hello.cpp.i
+CMakeFiles/HelloWorld.dir/hello/hello.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/hello/hello.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pluto/demo/hello/hello.cpp > CMakeFiles/HelloWorld.dir/hello/hello.cpp.i
 
-CMakeFiles/HelloWorld.dir/hello.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/hello.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pluto/demo/hello.cpp -o CMakeFiles/HelloWorld.dir/hello.cpp.s
+CMakeFiles/HelloWorld.dir/hello/hello.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/hello/hello.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pluto/demo/hello/hello.cpp -o CMakeFiles/HelloWorld.dir/hello/hello.cpp.s
 
-CMakeFiles/HelloWorld.dir/world.cpp.o: CMakeFiles/HelloWorld.dir/flags.make
-CMakeFiles/HelloWorld.dir/world.cpp.o: ../world.cpp
-CMakeFiles/HelloWorld.dir/world.cpp.o: CMakeFiles/HelloWorld.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pluto/demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HelloWorld.dir/world.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HelloWorld.dir/world.cpp.o -MF CMakeFiles/HelloWorld.dir/world.cpp.o.d -o CMakeFiles/HelloWorld.dir/world.cpp.o -c /home/pluto/demo/world.cpp
+CMakeFiles/HelloWorld.dir/world/world.cpp.o: CMakeFiles/HelloWorld.dir/flags.make
+CMakeFiles/HelloWorld.dir/world/world.cpp.o: ../world/world.cpp
+CMakeFiles/HelloWorld.dir/world/world.cpp.o: CMakeFiles/HelloWorld.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pluto/demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HelloWorld.dir/world/world.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HelloWorld.dir/world/world.cpp.o -MF CMakeFiles/HelloWorld.dir/world/world.cpp.o.d -o CMakeFiles/HelloWorld.dir/world/world.cpp.o -c /home/pluto/demo/world/world.cpp
 
-CMakeFiles/HelloWorld.dir/world.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/world.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pluto/demo/world.cpp > CMakeFiles/HelloWorld.dir/world.cpp.i
+CMakeFiles/HelloWorld.dir/world/world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/world/world.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pluto/demo/world/world.cpp > CMakeFiles/HelloWorld.dir/world/world.cpp.i
 
-CMakeFiles/HelloWorld.dir/world.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/world.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pluto/demo/world.cpp -o CMakeFiles/HelloWorld.dir/world.cpp.s
+CMakeFiles/HelloWorld.dir/world/world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/world/world.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pluto/demo/world/world.cpp -o CMakeFiles/HelloWorld.dir/world/world.cpp.s
 
 # Object files for target HelloWorld
 HelloWorld_OBJECTS = \
 "CMakeFiles/HelloWorld.dir/main.cpp.o" \
-"CMakeFiles/HelloWorld.dir/hello.cpp.o" \
-"CMakeFiles/HelloWorld.dir/world.cpp.o"
+"CMakeFiles/HelloWorld.dir/hello/hello.cpp.o" \
+"CMakeFiles/HelloWorld.dir/world/world.cpp.o"
 
 # External object files for target HelloWorld
 HelloWorld_EXTERNAL_OBJECTS =
 
 HelloWorld: CMakeFiles/HelloWorld.dir/main.cpp.o
-HelloWorld: CMakeFiles/HelloWorld.dir/hello.cpp.o
-HelloWorld: CMakeFiles/HelloWorld.dir/world.cpp.o
+HelloWorld: CMakeFiles/HelloWorld.dir/hello/hello.cpp.o
+HelloWorld: CMakeFiles/HelloWorld.dir/world/world.cpp.o
 HelloWorld: CMakeFiles/HelloWorld.dir/build.make
 HelloWorld: CMakeFiles/HelloWorld.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pluto/demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable HelloWorld"

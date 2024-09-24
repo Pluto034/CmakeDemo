@@ -129,29 +129,29 @@ HelloWorld/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/build
 .PHONY : HelloWorld/fast
 
-hello.o: hello.cpp.o
-.PHONY : hello.o
+hello/hello.o: hello/hello.cpp.o
+.PHONY : hello/hello.o
 
 # target to build an object file
-hello.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello.cpp.o
-.PHONY : hello.cpp.o
+hello/hello.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello/hello.cpp.o
+.PHONY : hello/hello.cpp.o
 
-hello.i: hello.cpp.i
-.PHONY : hello.i
+hello/hello.i: hello/hello.cpp.i
+.PHONY : hello/hello.i
 
 # target to preprocess a source file
-hello.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello.cpp.i
-.PHONY : hello.cpp.i
+hello/hello.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello/hello.cpp.i
+.PHONY : hello/hello.cpp.i
 
-hello.s: hello.cpp.s
-.PHONY : hello.s
+hello/hello.s: hello/hello.cpp.s
+.PHONY : hello/hello.s
 
 # target to generate assembly for a file
-hello.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello.cpp.s
-.PHONY : hello.cpp.s
+hello/hello.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello/hello.cpp.s
+.PHONY : hello/hello.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -177,29 +177,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-world.o: world.cpp.o
-.PHONY : world.o
+world/world.o: world/world.cpp.o
+.PHONY : world/world.o
 
 # target to build an object file
-world.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world.cpp.o
-.PHONY : world.cpp.o
+world/world.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world/world.cpp.o
+.PHONY : world/world.cpp.o
 
-world.i: world.cpp.i
-.PHONY : world.i
+world/world.i: world/world.cpp.i
+.PHONY : world/world.i
 
 # target to preprocess a source file
-world.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world.cpp.i
-.PHONY : world.cpp.i
+world/world.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world/world.cpp.i
+.PHONY : world/world.cpp.i
 
-world.s: world.cpp.s
-.PHONY : world.s
+world/world.s: world/world.cpp.s
+.PHONY : world/world.s
 
 # target to generate assembly for a file
-world.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world.cpp.s
-.PHONY : world.cpp.s
+world/world.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world/world.cpp.s
+.PHONY : world/world.cpp.s
 
 # Help Target
 help:
@@ -210,15 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HelloWorld"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... hello/hello.o"
+	@echo "... hello/hello.i"
+	@echo "... hello/hello.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... world.o"
-	@echo "... world.i"
-	@echo "... world.s"
+	@echo "... world/world.o"
+	@echo "... world/world.i"
+	@echo "... world/world.s"
 .PHONY : help
 
 

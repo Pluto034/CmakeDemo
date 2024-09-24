@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HelloWorld.dir/hello.cpp.o"
-  "CMakeFiles/HelloWorld.dir/hello.cpp.o.d"
+  "CMakeFiles/HelloWorld.dir/hello/hello.cpp.o"
+  "CMakeFiles/HelloWorld.dir/hello/hello.cpp.o.d"
   "CMakeFiles/HelloWorld.dir/main.cpp.o"
   "CMakeFiles/HelloWorld.dir/main.cpp.o.d"
-  "CMakeFiles/HelloWorld.dir/world.cpp.o"
-  "CMakeFiles/HelloWorld.dir/world.cpp.o.d"
+  "CMakeFiles/HelloWorld.dir/world/world.cpp.o"
+  "CMakeFiles/HelloWorld.dir/world/world.cpp.o.d"
   "HelloWorld"
   "HelloWorld.pdb"
 )

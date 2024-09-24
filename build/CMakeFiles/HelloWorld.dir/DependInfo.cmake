@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/pluto/demo/hello.cpp" "CMakeFiles/HelloWorld.dir/hello.cpp.o" "gcc" "CMakeFiles/HelloWorld.dir/hello.cpp.o.d"
+  "/home/pluto/demo/hello/hello.cpp" "CMakeFiles/HelloWorld.dir/hello/hello.cpp.o" "gcc" "CMakeFiles/HelloWorld.dir/hello/hello.cpp.o.d"
   "/home/pluto/demo/main.cpp" "CMakeFiles/HelloWorld.dir/main.cpp.o" "gcc" "CMakeFiles/HelloWorld.dir/main.cpp.o.d"
-  "/home/pluto/demo/world.cpp" "CMakeFiles/HelloWorld.dir/world.cpp.o" "gcc" "CMakeFiles/HelloWorld.dir/world.cpp.o.d"
+  "/home/pluto/demo/world/world.cpp" "CMakeFiles/HelloWorld.dir/world/world.cpp.o" "gcc" "CMakeFiles/HelloWorld.dir/world/world.cpp.o.d"
   )
 
 # Targets to which this target links.
