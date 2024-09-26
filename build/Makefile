@@ -65,15 +65,48 @@ CMAKE_BINARY_DIR = /home/pluto/demo/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -84,6 +117,28 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,48 +172,115 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HelloWorld
+# Target rules for targets named main
 
 # Build rule for target.
-HelloWorld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HelloWorld
-.PHONY : HelloWorld
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-HelloWorld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/build
-.PHONY : HelloWorld/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-hello/hello.o: hello/hello.cpp.o
-.PHONY : hello/hello.o
+#=============================================================================
+# Target rules for targets named hellolib
 
-# target to build an object file
-hello/hello.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello/hello.cpp.o
-.PHONY : hello/hello.cpp.o
+# Build rule for target.
+hellolib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hellolib
+.PHONY : hellolib
 
-hello/hello.i: hello/hello.cpp.i
-.PHONY : hello/hello.i
+# fast build rule for target.
+hellolib/fast:
+	$(MAKE) $(MAKESILENT) -f hello/CMakeFiles/hellolib.dir/build.make hello/CMakeFiles/hellolib.dir/build
+.PHONY : hellolib/fast
 
-# target to preprocess a source file
-hello/hello.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello/hello.cpp.i
-.PHONY : hello/hello.cpp.i
+#=============================================================================
+# Target rules for targets named worldlib
 
-hello/hello.s: hello/hello.cpp.s
-.PHONY : hello/hello.s
+# Build rule for target.
+worldlib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 worldlib
+.PHONY : worldlib
 
-# target to generate assembly for a file
-hello/hello.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/hello/hello.cpp.s
-.PHONY : hello/hello.cpp.s
+# fast build rule for target.
+worldlib/fast:
+	$(MAKE) $(MAKESILENT) -f world/CMakeFiles/worldlib.dir/build.make world/CMakeFiles/worldlib.dir/build
+.PHONY : worldlib/fast
+
+#=============================================================================
+# Target rules for targets named test_hello
+
+# Build rule for target.
+test_hello: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hello
+.PHONY : test_hello
+
+# fast build rule for target.
+test_hello/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_hello.dir/build.make tests/CMakeFiles/test_hello.dir/build
+.PHONY : test_hello/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +288,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,32 +296,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-world/world.o: world/world.cpp.o
-.PHONY : world/world.o
-
-# target to build an object file
-world/world.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world/world.cpp.o
-.PHONY : world/world.cpp.o
-
-world/world.i: world/world.cpp.i
-.PHONY : world/world.i
-
-# target to preprocess a source file
-world/world.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world/world.cpp.i
-.PHONY : world/world.cpp.i
-
-world/world.s: world/world.cpp.s
-.PHONY : world/world.s
-
-# target to generate assembly for a file
-world/world.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/world/world.cpp.s
-.PHONY : world/world.cpp.s
 
 # Help Target
 help:
@@ -208,17 +306,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... HelloWorld"
-	@echo "... hello/hello.o"
-	@echo "... hello/hello.i"
-	@echo "... hello/hello.s"
+	@echo "... test"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... hellolib"
+	@echo "... main"
+	@echo "... test_hello"
+	@echo "... worldlib"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... world/world.o"
-	@echo "... world/world.i"
-	@echo "... world/world.s"
 .PHONY : help
 
 

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o -o main  -Wl,-rpath,/home/pluto/demo/build/hello:/home/pluto/demo/build/world hello/libhellolib.so world/libworldlib.so 
